@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-22T12:13:05.878Z</updated>
+  <updated>2017-06-23T15:17:11.875Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/23/hexo%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/06/23/hexo更换博客主题/</id>
+    <published>2017-06-23T15:17:11.631Z</published>
+    <updated>2017-06-23T15:17:11.875Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git静态博客换主题"><a href="#git静态博客换主题" class="headerlink" title="git静态博客换主题"></a>git静态博客换主题</h1><blockquote>
+<p>首先在前面推荐个好看的主题：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a></p>
+<hr>
+<h2 id="之前弄了个github账户，后来发现在github上托管博客还可以，于是准备自己也弄一个。"><a href="#之前弄了个github账户，后来发现在github上托管博客还可以，于是准备自己也弄一个。" class="headerlink" title="之前弄了个github账户，后来发现在github上托管博客还可以，于是准备自己也弄一个。"></a>之前弄了个github账户，后来发现在github上托管博客还可以，于是准备自己也弄一个。</h2><h2 id="昨天把自己的博客初步弄到github上了，今天发现一个very-cool的主题，决定换上。由于白天没有时间，晚上弄了下。"><a href="#昨天把自己的博客初步弄到github上了，今天发现一个very-cool的主题，决定换上。由于白天没有时间，晚上弄了下。" class="headerlink" title="昨天把自己的博客初步弄到github上了，今天发现一个very cool的主题，决定换上。由于白天没有时间，晚上弄了下。"></a>昨天把自己的博客初步弄到github上了，今天发现一个very cool的主题，决定换上。由于白天没有时间，晚上弄了下。</h2><h3 id="1-进入Hexo文件夹下的themes目录，右键Git-Bash，在命令行输入-git-clone-主题地址"><a href="#1-进入Hexo文件夹下的themes目录，右键Git-Bash，在命令行输入-git-clone-主题地址" class="headerlink" title="1. 进入Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:git clone 主题地址"></a>1. 进入Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:<code>git clone 主题地址</code></h3><h3 id="2-修改文件夹下的配置文件-config-yml-theme：next（改为自己的）"><a href="#2-修改文件夹下的配置文件-config-yml-theme：next（改为自己的）" class="headerlink" title="2. 修改文件夹下的配置文件_config.yml  theme：next（改为自己的）"></a>2. 修改文件夹下的配置文件_config.yml  theme：next（改为自己的）</h3><h3 id="3-在Hexo目录下git-bash，输入命令：hexo-g和hexo-s"><a href="#3-在Hexo目录下git-bash，输入命令：hexo-g和hexo-s" class="headerlink" title="3. 在Hexo目录下git bash，输入命令：hexo g和hexo s"></a>3. 在Hexo目录下git bash，输入命令：<code>hexo g</code>和<code>hexo s</code></h3><h3 id="4-打开浏览器，输入-http-localhost-4000-即可看见本地已经刷新成功了。"><a href="#4-打开浏览器，输入-http-localhost-4000-即可看见本地已经刷新成功了。" class="headerlink" title="4  打开浏览器，输入 http://localhost:4000/ 即可看见本地已经刷新成功了。"></a>4  打开浏览器，输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 即可看见本地已经刷新成功了。</h3><h3 id="5-将数据push到github上。"><a href="#5-将数据push到github上。" class="headerlink" title="5. 将数据push到github上。"></a>5. 将数据push到github上。</h3><p>##晚上在第五步上花了好长时间，还是对github不太熟悉吧。开始直接在hexo上推到仓库，发生错误了。觉得，干脆直接把博客仓库下的文件利用本地来更新，然后到博客仓库电脑区克隆主题，结果发现克隆速度简直了，后来直接终止了。没办法，直接从hexo下复制文件过去，各种.git文件夹错误，还是传不上去。后来使用source tree来试试，之前github上已经有主题了，而且各种重复，导致识别文件都出现了错误。没办法，各种找百度，google，错误代码每一行查找，发现是权限问题， git push origin master报错</p>
+<p>##<code>fatal: could not read Username for &#39;https://github.com&#39;: No such file or directo</code></p>
+<h2 id="原因使用https方式的时候-在git-remote-add-origin-的https-url-里面没有用户名和密码-修改为如下："><a href="#原因使用https方式的时候-在git-remote-add-origin-的https-url-里面没有用户名和密码-修改为如下：" class="headerlink" title="原因使用https方式的时候 在git remote add origin 的https url 里面没有用户名和密码.修改为如下："></a>原因使用https方式的时候 在git remote add origin 的https url 里面没有用户名和密码.修改为如下：</h2><h3 id="修改-git-config-隐藏文件为git-remote-add-origin-https-username-password-github-com-username-project-git-格式"><a href="#修改-git-config-隐藏文件为git-remote-add-origin-https-username-password-github-com-username-project-git-格式" class="headerlink" title="修改 .git/config 隐藏文件为git remote add origin https://{username}:{password}@github.com/{username}/project.git 格式"></a>修改 .git/config 隐藏文件为git remote add origin <a href="https://{username}:{password}@github.com/{username}/project.git" target="_blank" rel="external">https://{username}:{password}@github.com/{username}/project.git</a> 格式</h3><p>##最后成功了，弄了一大晚上，明天将自己的博客缝补缝补吧。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;git静态博客换主题&quot;&gt;&lt;a href=&quot;#git静态博客换主题&quot; class=&quot;headerlink&quot; title=&quot;git静态博客换主题&quot;&gt;&lt;/a&gt;git静态博客换主题&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;首先在前面推荐个好看的主题：&lt;a href=&quot;ht
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
