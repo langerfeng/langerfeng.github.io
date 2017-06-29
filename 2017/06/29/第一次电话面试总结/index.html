@@ -1,0 +1,727 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="常见基础题目," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="今天晚上进行了次电话面试，对其中的一些非常基础的题目进行总结。 Tcp/Ip协议的三次握手和四次挥手：三次握手：主机A：创建传输控制模块tcb,向B发出连接请求，首部中的同部位SYN=1;同时选择一个初始序号seq=x,客户端进入SYN-SENT状态。服务器端B：一直处于listen状态，收到请求，如果同意：把SYN位和ACK位置1；确认号ack=x+1，初始序号seq=y;主机A：确认报文段的">
+<meta name="keywords" content="常见基础题目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一次电话面试总结">
+<meta property="og:url" content="http://yoursite.com/2017/06/29/第一次电话面试总结/index.html">
+<meta property="og:site_name" content="浪儿风">
+<meta property="og:description" content="今天晚上进行了次电话面试，对其中的一些非常基础的题目进行总结。 Tcp/Ip协议的三次握手和四次挥手：三次握手：主机A：创建传输控制模块tcb,向B发出连接请求，首部中的同部位SYN=1;同时选择一个初始序号seq=x,客户端进入SYN-SENT状态。服务器端B：一直处于listen状态，收到请求，如果同意：把SYN位和ACK位置1；确认号ack=x+1，初始序号seq=y;主机A：确认报文段的">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/TCPIP3&4.jpg">
+<meta property="og:updated_time" content="2017-06-29T14:06:17.206Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第一次电话面试总结">
+<meta name="twitter:description" content="今天晚上进行了次电话面试，对其中的一些非常基础的题目进行总结。 Tcp/Ip协议的三次握手和四次挥手：三次握手：主机A：创建传输控制模块tcb,向B发出连接请求，首部中的同部位SYN=1;同时选择一个初始序号seq=x,客户端进入SYN-SENT状态。服务器端B：一直处于listen状态，收到请求，如果同意：把SYN位和ACK位置1；确认号ack=x+1，初始序号seq=y;主机A：确认报文段的">
+<meta name="twitter:image" content="http://osaofozol.bkt.clouddn.com/TCPIP3&4.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/29/第一次电话面试总结/"/>
+
+
+
+
+
+  <title>第一次电话面试总结 | 浪儿风</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">浪儿风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">浪儿个风吧风吹浪</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            目录
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/第一次电话面试总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浪儿风">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浪儿风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">第一次电话面试总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T20:39:39+08:00">
+                2017-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>今天晚上进行了次电话面试，对其中的一些非常基础的题目进行总结。</p>
+<h2 id="Tcp-Ip协议的三次握手和四次挥手："><a href="#Tcp-Ip协议的三次握手和四次挥手：" class="headerlink" title="Tcp/Ip协议的三次握手和四次挥手："></a>Tcp/Ip协议的三次握手和四次挥手：</h2><h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><p>主机A：创建传输控制模块tcb,向B发出连接请求，首部中的同部位SYN=1;同时选择一个初始序号seq=x,客户端进入SYN-SENT状态。<br>服务器端B：一直处于listen状态，收到请求，如果同意：把SYN位和ACK位置1；确认号ack=x+1，初始序号seq=y;<br>主机A：确认报文段的ACK=1;确认号ack=y+1；自己的序号seq=x+1;<br>为什么要三次握手（为什么还要第三次握手）：为了防止已失效的连接请求报文段突然又传送到了B，从而产生错误。</p>
+<h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><p>传输结束后，双方都可以释放连接。A的应用进程先向tcp发出释放报文段，并停止发送数据，主动关闭tcp连接。<br>客户A：释放报文段首部FIN=1；序号seq=u,他等于前面已传送数据的最后一个字节加1；A进入FIN-WAIT-1（终止等待一状态）。<br>服务器B:收到释放报文段后确认，确认号ack=u+1;seq=v;ACk=1;<br>这时处于半关闭状态，从B发的数据A依然接受，但A不发送。若B不发送数据，其进程通知tcp释放连接。<br>服务器B：FIN=1;ACK=1;ack=u+1,seq=w;<br>客户A：收到报文后，对此确认，ACK=1;ack=w+1;seq=u+1;<br>双方都进入TIAM-WAIT状态，tcp还没有释放掉，需等待2MSL(MSL:最长报文段寿命)；</p>
+</blockquote>
+<p>为什么要等待2MSL?</p>
+<ul>
+<li>保证A发送的最后一个ACK报文段能到达B；</li>
+<li>防止已失效的连接请求报文段出现在本连接中；<br><img src="http://osaofozol.bkt.clouddn.com/TCPIP3&amp;4.jpg" alt="TCP/IP握手挥手"></li>
+</ul>
+<hr>
+<h2 id="linux进程线程间通信"><a href="#linux进程线程间通信" class="headerlink" title="linux进程线程间通信"></a>linux进程线程间通信</h2><p>进程间通信：</p>
+<ul>
+<li>管道：半双工通信，只能在具有亲缘关系（父子进程）间通信，传输无格式的字节流，大小有限</li>
+<li>有名管道：允许没有亲缘关系的进程间通信。</li>
+<li>信号：通知接受进程某个事件已发生</li>
+<li>信号量：作为一种计时器，控制多个进程对共享资源的访问，常作为一种锁机制</li>
+<li>消息队列：由消息的链表，存放在内核中并由消息队列标识符标识。</li>
+<li>共享内存：映射一段能被其他进程访问的内存，由一个进程创建，多个进程可访问。</li>
+<li>套接字：用于不同主机间进程的通信。</li>
+</ul>
+<p>线程间通信：</p>
+<ul>
+<li>信号机制</li>
+<li>信号量机制：包括无名线程信号量和命名线程信号量。</li>
+<li>锁机制: 互斥锁：以排他方式防止信号量被修改。读写锁：允许多个线程同时读共享数据，对写操作排斥。条件变量：以原子的方式阻塞进程，直到某个特定条件为真为止。</li>
+</ul>
+<hr>
+<h2 id="c-基类虚析构函数"><a href="#c-基类虚析构函数" class="headerlink" title="c++基类虚析构函数"></a>c++基类虚析构函数</h2><p>c++中基类采用virtual虚析构函数是为了防止内存泄露。如果派生类申请了内存空间，饼子啊其析构函数中对这些内存空间进行释放。假设基类采用的是非虚析构函数，当删除基类指针指向的派生类对象时就不会触发动态绑定，因而只会调用基类的析构函数，而不会调用派生类的析构函数。在这种情况下，派生类申请的空间得不到释放造成内存泄露。</p>
+<p>动态绑定：运行时绑定，通过地址实现；静态绑定：编译时绑定，通过对象调用。</p>
+<p>只有采用指针-&gt;函数（）或引用变量.函数（）的方式调用c++类中的虚函数次啊会执行动态绑定。对于c++中的非虚函数，无论采用什么方式调用，都不会执行动态绑定。</p>
+<hr>
+<h2 id="c中malloc-分配内存"><a href="#c中malloc-分配内存" class="headerlink" title="c中malloc()分配内存"></a>c中malloc()分配内存</h2><p>根据C中malloc(n)函数动态分配堆的机制：分配堆内存的时候就依序由低到高的地址搜索“堆链”中的堆块，搜索到“可用堆内存”满足n的堆块（如Heap1）为止。若Heap1的“可用堆内存”刚好满足n，则将Heap1从“堆链”中删除，同时重新组织各堆块形成新的“堆链”；若Heap1的“可用堆内存”大小大于n，则将malloc(n)申请到的“Header” + “可用堆内存”部分从Heap1中分裂，将剩余的Heap1堆内存块重新加入“堆链”中。经分裂后的堆内存也包含“Header”和“可用堆内存”两部分（如图Figure 2），然后将由malloc()分配得到的“可用堆内存”返回给用户。若某块堆内存空间比较大（如Heap1），能够满足较小内存的多次申请，那么由malloc(n)多次申请的堆内存块都是连续被分配给用户的（因为有Header，所以用户使用的堆地址不连续）。使用malloc分配的内存空间在虚拟地址空间上是连续的，但是转换到物理内存空间上有可能是不连续的，因为有可能相邻的两个字节是在不同的物理分页上；</p>
+<hr>
+<h3 id="感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了"><a href="#感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了" class="headerlink" title="感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了"></a>感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了</h3>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/常见基础题目/" rel="tag"># 常见基础题目</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/29/博客编辑工具初识/" rel="next" title="博客编辑工具初识">
+                <i class="fa fa-chevron-left"></i> 博客编辑工具初识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="浪儿风" />
+          <p class="site-author-name" itemprop="name">浪儿风</p>
+           
+              <p class="site-description motion-element" itemprop="description">缘分，就像你我此时的相遇！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/langerfeng" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="814526975" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-quora"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tcp-Ip协议的三次握手和四次挥手："><span class="nav-number">1.</span> <span class="nav-text">Tcp/Ip协议的三次握手和四次挥手：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手："><span class="nav-number">1.1.</span> <span class="nav-text">三次握手：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四次挥手："><span class="nav-number">1.2.</span> <span class="nav-text">四次挥手：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux进程线程间通信"><span class="nav-number">2.</span> <span class="nav-text">linux进程线程间通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-基类虚析构函数"><span class="nav-number">3.</span> <span class="nav-text">c++基类虚析构函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c中malloc-分配内存"><span class="nav-number">4.</span> <span class="nav-text">c中malloc()分配内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了"><span class="nav-number">4.1.</span> <span class="nav-text">感觉这次GG了，接下来几天要开始复习了。接下来会写篇复习方面的文章了，这次就到这了</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">浪儿风</span>
+</div>
+
+
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+-->
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
