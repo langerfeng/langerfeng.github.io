@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-27T10:58:01.101Z</updated>
+  <updated>2017-06-29T08:25:56.947Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客编辑工具初识</title>
+    <link href="http://yoursite.com/2017/06/29/%E5%8D%9A%E5%AE%A2%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7%E5%88%9D%E8%AF%86/"/>
+    <id>http://yoursite.com/2017/06/29/博客编辑工具初识/</id>
+    <published>2017-06-29T08:20:27.000Z</published>
+    <updated>2017-06-29T08:25:56.947Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<h3 id="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍"><a href="#之前在github上搭建了博客，今天写一篇关于写博文工具的介绍" class="headerlink" title="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍"></a>之前在github上搭建了博客，今天写一篇关于写博文工具的介绍</h3><h3 id="我用的是Markdown这款工具，详细点的各种信息可以点击"><a href="#我用的是Markdown这款工具，详细点的各种信息可以点击" class="headerlink" title="我用的是Markdown这款工具，详细点的各种信息可以点击"></a>我用的是Markdown这款工具，详细点的各种信息可以点击</h3><h3 id="【Markdown官网】http-www-markdownpad-com"><a href="#【Markdown官网】http-www-markdownpad-com" class="headerlink" title="【Markdown官网】http://www.markdownpad.com/"></a>【Markdown官网】<a href="http://www.markdownpad.com/" target="_blank" rel="external">http://www.markdownpad.com/</a></h3><h3 id="作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。"><a href="#作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。" class="headerlink" title="作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。"></a>作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。</h3><h3 id="英文版https-daringfireball-net-projects-markdown-syntax"><a href="#英文版https-daringfireball-net-projects-markdown-syntax" class="headerlink" title="英文版https://daringfireball.net/projects/markdown/syntax"></a>英文版<a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">https://daringfireball.net/projects/markdown/syntax</a></h3><h3 id="中文版http-wowubuntu-com-markdown-list"><a href="#中文版http-wowubuntu-com-markdown-list" class="headerlink" title="中文版http://wowubuntu.com/markdown/#list"></a>中文版<a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">http://wowubuntu.com/markdown/#list</a></h3><hr>
+<h3 id="下面介绍一些常用的编辑功能："><a href="#下面介绍一些常用的编辑功能：" class="headerlink" title="下面介绍一些常用的编辑功能："></a>下面介绍一些常用的编辑功能：</h3><h3 id="标题文字：字体的大小可以使用不同数目的-来控制："><a href="#标题文字：字体的大小可以使用不同数目的-来控制：" class="headerlink" title="标题文字：字体的大小可以使用不同数目的#来控制："></a>标题文字：字体的大小可以使用不同数目的#来控制：</h3><p><img src="http://osaofozol.bkt.clouddn.com/wenzi.PNG" alt="BiaoTi"></p>
+<h3 id="引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上-gt-就可以了。"><a href="#引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上-gt-就可以了。" class="headerlink" title="引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上&gt;就可以了。"></a>引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上&gt;就可以了。</h3><p><img src="http://osaofozol.bkt.clouddn.com/yinyong.PNG" alt="ALT 引用"></p>
+<h3 id="列表-列表的显示只需要在文字前加上-或-即可变为无序列表，有序列表则直接在文字前加-1-2-3-符号要和文字之间加上一个字符的空格。"><a href="#列表-列表的显示只需要在文字前加上-或-即可变为无序列表，有序列表则直接在文字前加-1-2-3-符号要和文字之间加上一个字符的空格。" class="headerlink" title="列表: 列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1. 2. 3. 符号要和文字之间加上一个字符的空格。"></a>列表: 列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1. 2. 3. 符号要和文字之间加上一个字符的空格。</h3><p><img src="http://osaofozol.bkt.clouddn.com/liebiao.PNG" alt="ALT 链接"></p>
+<h3 id="图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！-其中！开头，-中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。"><a href="#图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！-其中！开头，-中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。" class="headerlink" title="图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！  其中！开头，[]中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。"></a>图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！<a href=""></a>  其中！开头，[]中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。</h3><p><img src="http://osaofozol.bkt.clouddn.com/tupian.PNG" alt="ALT 图片"></p>
+<h3 id="链接：一种是直接显示网址，直接将网址放在-lt-gt-中就可以了，另外一种就是显示文字，文字上有超链接："><a href="#链接：一种是直接显示网址，直接将网址放在-lt-gt-中就可以了，另外一种就是显示文字，文字上有超链接：" class="headerlink" title="链接：一种是直接显示网址，直接将网址放在&lt;&gt;中就可以了，另外一种就是显示文字，文字上有超链接："></a>链接：一种是直接显示网址，直接将网址放在&lt;&gt;中就可以了，另外一种就是显示文字，文字上有超链接：<a href=""></a></h3><p><img src="http://osaofozol.bkt.clouddn.com/lianjie.PNG" alt="ALT 链接"></p>
+<h3 id="代码：在文中引入一段代码，只需要用-将代码包裹起来就好-使用tab键可以缩进。"><a href="#代码：在文中引入一段代码，只需要用-将代码包裹起来就好-使用tab键可以缩进。" class="headerlink" title="代码：在文中引入一段代码，只需要用``将代码包裹起来就好,使用tab键可以缩进。"></a>代码：在文中引入一段代码，只需要用``将代码包裹起来就好,使用tab键可以缩进。</h3><p><img src="http://osaofozol.bkt.clouddn.com/daima.PNG" alt="ALT 代码"></p>
+</blockquote>
+<h3 id="分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个-包含一段文本就是粗体，斜体：用一个-包含一段文本就是斜体。"><a href="#分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个-包含一段文本就是粗体，斜体：用一个-包含一段文本就是斜体。" class="headerlink" title="分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个  包含一段文本就是粗体，斜体：用一个  包含一段文本就是斜体。"></a>分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个 <em> 包含一段文本就是粗体，斜体：用一个 </em> 包含一段文本就是斜体。</h3><p><img src="http://osaofozol.bkt.clouddn.com/fenge.PNG" alt="ALT 分割"></p>
+<hr>
+<p>###这篇博客已完。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;h3 id=&quot;之前在github上搭建了博客，今天写一篇关于写博文工具的介绍&quot;&gt;&lt;a href=&quot;#之前在github上搭建了博客，今天写一篇关于写博文工具的介绍&quot; class=&quot;headerlink&quot; title=&quot;之前在github上搭建了博客，今
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo更换博客主题</title>

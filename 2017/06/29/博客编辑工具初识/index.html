@@ -1,0 +1,711 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="markdown," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍我用的是Markdown这款工具，详细点的各种信息可以点击【Markdown官网】http://www.markdownpad.com/作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。英文版https://daringfireball.net/projects/markdown/syntax中">
+<meta name="keywords" content="markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客编辑工具初识">
+<meta property="og:url" content="http://yoursite.com/2017/06/29/博客编辑工具初识/index.html">
+<meta property="og:site_name" content="浪儿风">
+<meta property="og:description" content="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍我用的是Markdown这款工具，详细点的各种信息可以点击【Markdown官网】http://www.markdownpad.com/作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。英文版https://daringfireball.net/projects/markdown/syntax中">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/wenzi.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/yinyong.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/liebiao.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/tupian.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/lianjie.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/daima.PNG">
+<meta property="og:image" content="http://osaofozol.bkt.clouddn.com/fenge.PNG">
+<meta property="og:updated_time" content="2017-06-29T08:25:56.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客编辑工具初识">
+<meta name="twitter:description" content="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍我用的是Markdown这款工具，详细点的各种信息可以点击【Markdown官网】http://www.markdownpad.com/作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。英文版https://daringfireball.net/projects/markdown/syntax中">
+<meta name="twitter:image" content="http://osaofozol.bkt.clouddn.com/wenzi.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/29/博客编辑工具初识/"/>
+
+
+
+
+
+  <title>博客编辑工具初识 | 浪儿风</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">浪儿风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">浪儿个风吧风吹浪</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            目录
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/博客编辑工具初识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="浪儿风">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="浪儿风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">博客编辑工具初识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T16:20:27+08:00">
+                2017-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<h3 id="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍"><a href="#之前在github上搭建了博客，今天写一篇关于写博文工具的介绍" class="headerlink" title="之前在github上搭建了博客，今天写一篇关于写博文工具的介绍"></a>之前在github上搭建了博客，今天写一篇关于写博文工具的介绍</h3><h3 id="我用的是Markdown这款工具，详细点的各种信息可以点击"><a href="#我用的是Markdown这款工具，详细点的各种信息可以点击" class="headerlink" title="我用的是Markdown这款工具，详细点的各种信息可以点击"></a>我用的是Markdown这款工具，详细点的各种信息可以点击</h3><h3 id="【Markdown官网】http-www-markdownpad-com"><a href="#【Markdown官网】http-www-markdownpad-com" class="headerlink" title="【Markdown官网】http://www.markdownpad.com/"></a>【Markdown官网】<a href="http://www.markdownpad.com/" target="_blank" rel="external">http://www.markdownpad.com/</a></h3><h3 id="作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。"><a href="#作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。" class="headerlink" title="作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。"></a>作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。</h3><h3 id="英文版https-daringfireball-net-projects-markdown-syntax"><a href="#英文版https-daringfireball-net-projects-markdown-syntax" class="headerlink" title="英文版https://daringfireball.net/projects/markdown/syntax"></a>英文版<a href="https://daringfireball.net/projects/markdown/syntax" target="_blank" rel="external">https://daringfireball.net/projects/markdown/syntax</a></h3><h3 id="中文版http-wowubuntu-com-markdown-list"><a href="#中文版http-wowubuntu-com-markdown-list" class="headerlink" title="中文版http://wowubuntu.com/markdown/#list"></a>中文版<a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="external">http://wowubuntu.com/markdown/#list</a></h3><hr>
+<h3 id="下面介绍一些常用的编辑功能："><a href="#下面介绍一些常用的编辑功能：" class="headerlink" title="下面介绍一些常用的编辑功能："></a>下面介绍一些常用的编辑功能：</h3><h3 id="标题文字：字体的大小可以使用不同数目的-来控制："><a href="#标题文字：字体的大小可以使用不同数目的-来控制：" class="headerlink" title="标题文字：字体的大小可以使用不同数目的#来控制："></a>标题文字：字体的大小可以使用不同数目的#来控制：</h3><p><img src="http://osaofozol.bkt.clouddn.com/wenzi.PNG" alt="BiaoTi"></p>
+<h3 id="引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上-gt-就可以了。"><a href="#引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上-gt-就可以了。" class="headerlink" title="引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上&gt;就可以了。"></a>引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上&gt;就可以了。</h3><p><img src="http://osaofozol.bkt.clouddn.com/yinyong.PNG" alt="ALT 引用"></p>
+<h3 id="列表-列表的显示只需要在文字前加上-或-即可变为无序列表，有序列表则直接在文字前加-1-2-3-符号要和文字之间加上一个字符的空格。"><a href="#列表-列表的显示只需要在文字前加上-或-即可变为无序列表，有序列表则直接在文字前加-1-2-3-符号要和文字之间加上一个字符的空格。" class="headerlink" title="列表: 列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1. 2. 3. 符号要和文字之间加上一个字符的空格。"></a>列表: 列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1. 2. 3. 符号要和文字之间加上一个字符的空格。</h3><p><img src="http://osaofozol.bkt.clouddn.com/liebiao.PNG" alt="ALT 链接"></p>
+<h3 id="图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！-其中！开头，-中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。"><a href="#图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！-其中！开头，-中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。" class="headerlink" title="图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！  其中！开头，[]中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。"></a>图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！<a href=""></a>  其中！开头，[]中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。</h3><p><img src="http://osaofozol.bkt.clouddn.com/tupian.PNG" alt="ALT 图片"></p>
+<h3 id="链接：一种是直接显示网址，直接将网址放在-lt-gt-中就可以了，另外一种就是显示文字，文字上有超链接："><a href="#链接：一种是直接显示网址，直接将网址放在-lt-gt-中就可以了，另外一种就是显示文字，文字上有超链接：" class="headerlink" title="链接：一种是直接显示网址，直接将网址放在&lt;&gt;中就可以了，另外一种就是显示文字，文字上有超链接："></a>链接：一种是直接显示网址，直接将网址放在&lt;&gt;中就可以了，另外一种就是显示文字，文字上有超链接：<a href=""></a></h3><p><img src="http://osaofozol.bkt.clouddn.com/lianjie.PNG" alt="ALT 链接"></p>
+<h3 id="代码：在文中引入一段代码，只需要用-将代码包裹起来就好-使用tab键可以缩进。"><a href="#代码：在文中引入一段代码，只需要用-将代码包裹起来就好-使用tab键可以缩进。" class="headerlink" title="代码：在文中引入一段代码，只需要用``将代码包裹起来就好,使用tab键可以缩进。"></a>代码：在文中引入一段代码，只需要用``将代码包裹起来就好,使用tab键可以缩进。</h3><p><img src="http://osaofozol.bkt.clouddn.com/daima.PNG" alt="ALT 代码"></p>
+</blockquote>
+<h3 id="分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个-包含一段文本就是粗体，斜体：用一个-包含一段文本就是斜体。"><a href="#分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个-包含一段文本就是粗体，斜体：用一个-包含一段文本就是斜体。" class="headerlink" title="分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个  包含一段文本就是粗体，斜体：用一个  包含一段文本就是斜体。"></a>分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个 <em> 包含一段文本就是粗体，斜体：用一个 </em> 包含一段文本就是斜体。</h3><p><img src="http://osaofozol.bkt.clouddn.com/fenge.PNG" alt="ALT 分割"></p>
+<hr>
+<p>###这篇博客已完。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/27/hexo更换博客主题/" rel="next" title="hexo更换博客主题">
+                <i class="fa fa-chevron-left"></i> hexo更换博客主题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="浪儿风" />
+          <p class="site-author-name" itemprop="name">浪儿风</p>
+           
+              <p class="site-description motion-element" itemprop="description">缘分，就像你我此时的相遇！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/langerfeng" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="814526975" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-quora"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#之前在github上搭建了博客，今天写一篇关于写博文工具的介绍"><span class="nav-number">1.</span> <span class="nav-text">之前在github上搭建了博客，今天写一篇关于写博文工具的介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我用的是Markdown这款工具，详细点的各种信息可以点击"><span class="nav-number">2.</span> <span class="nav-text">我用的是Markdown这款工具，详细点的各种信息可以点击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【Markdown官网】http-www-markdownpad-com"><span class="nav-number">3.</span> <span class="nav-text">【Markdown官网】http://www.markdownpad.com/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。"><span class="nav-number">4.</span> <span class="nav-text">作为一个编辑工具，必要的编辑语法规则肯定是不能少的。想看原生味的详细的可以点击下面的网址。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#英文版https-daringfireball-net-projects-markdown-syntax"><span class="nav-number">5.</span> <span class="nav-text">英文版https://daringfireball.net/projects/markdown/syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文版http-wowubuntu-com-markdown-list"><span class="nav-number">6.</span> <span class="nav-text">中文版http://wowubuntu.com/markdown/#list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面介绍一些常用的编辑功能："><span class="nav-number">7.</span> <span class="nav-text">下面介绍一些常用的编辑功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题文字：字体的大小可以使用不同数目的-来控制："><span class="nav-number">8.</span> <span class="nav-text">标题文字：字体的大小可以使用不同数目的#来控制：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上-gt-就可以了。"><span class="nav-number">9.</span> <span class="nav-text">引用：你在文中引用了某些人的话啊，网址啊什么的，可以加上引用，文字会变淡。在文本的前面加上>就可以了。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表-列表的显示只需要在文字前加上-或-即可变为无序列表，有序列表则直接在文字前加-1-2-3-符号要和文字之间加上一个字符的空格。"><span class="nav-number">10.</span> <span class="nav-text">列表: 列表的显示只需要在文字前加上 - 或 * 即可变为无序列表，有序列表则直接在文字前加 1. 2. 3. 符号要和文字之间加上一个字符的空格。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！-其中！开头，-中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。"><span class="nav-number">11.</span> <span class="nav-text">图片：只有文字的文章相信大多数人都不太喜欢看，加入图片的方法是：！  其中！开头，[]中存放的是一旦图片显示不出来就显示的文字，（）中是图片的url，这里有点麻烦，我试了下本地链接，不过失败了，不知道能不能。后来注册的七牛云，上传图片，获取url。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接：一种是直接显示网址，直接将网址放在-lt-gt-中就可以了，另外一种就是显示文字，文字上有超链接："><span class="nav-number">12.</span> <span class="nav-text">链接：一种是直接显示网址，直接将网址放在<>中就可以了，另外一种就是显示文字，文字上有超链接：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码：在文中引入一段代码，只需要用-将代码包裹起来就好-使用tab键可以缩进。"><span class="nav-number">13.</span> <span class="nav-text">代码：在文中引入一段代码，只需要用``将代码包裹起来就好,使用tab键可以缩进。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个-包含一段文本就是粗体，斜体：用一个-包含一段文本就是斜体。"><span class="nav-number">14.</span> <span class="nav-text">分割线：可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。粗体：用两个  包含一段文本就是粗体，斜体：用一个  包含一段文本就是斜体。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">浪儿风</span>
+</div>
+
+
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+-->
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
